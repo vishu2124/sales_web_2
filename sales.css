@@ -1,0 +1,45 @@
+body{
+	background-image: url("background1.jpg");
+	background-size: 100%;
+}
+
+
+.icon{
+	margin-top: 100px;
+}
+.icon_bottom{
+	margin-top: 50px;
+}
+img{
+	margin-left: 90px;
+}
+input#f1{
+	border-radius: 4px;
+}
+p#create_text{
+	margin-bottom: 0px;
+	font-size: 45px;
+	margin-left: 50px;
+}
+
+p#itsfree_text{
+	margin-top: 0px;
+	font-size: 25px;
+	margin-left: 50px;
+}
+div#backlogin{
+  width: 40%;
+  height: 50%;
+  position: relative;
+}
+div#backlogin::before {
+  content: "";
+  background: url(background1.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}

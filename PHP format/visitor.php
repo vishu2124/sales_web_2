@@ -24,7 +24,7 @@
 <img src="menu.png" onclick="openNav()" style="float:left; width:30px; margin-bottom:0px;"></img><br><br><br>
 
 <!-- Login form-->
-<form method=post action="#">
+<form method=post action="<?php echo htmlspecialchars("#");?>">
 <div class="btn-group" style="float:right; margin-right:30px;">
 				<input type="text" class="form-control" style="width:50%; float:left" placeholder="User Id">
 				<input type="password" class="form-control" style="width:50%" placeholder="Password">
@@ -33,8 +33,6 @@
 				<a href="forgetpwd.html">forget password?</a>
 			</form>
 </div><br><br><br><br><br>
-
-
 <!-- Registration form-->
 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 btn-group">
 	<p class="text-success" style="font-family:'comic sans ms';">This page is for the login and registration for the visitors Thank-you for visiting our organization</p>
@@ -43,12 +41,12 @@
 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-info">
 <p id="create_text">Create an account</p>
 <p id="itsfree_text">It's free and always be</p>
-<form class="form-group">
-<input type="text" placeholder="First name" class="form-control" style="width:40%; float:left;">
-<input type="text"  placeholder="Last name" class="form-control" style="width:40%; float:right; margin-bottom:10px;margin-right:20%"><br>
+<form class="form-group" METHOD=POST ACTION="<?php echo htmlspecialchars("successful.php");?>">
+<input type="text" name="fname" placeholder="First name" class="form-control" style="width:40%; float:left;">
+<input type="text" name="lname" placeholder="Last name" class="form-control" style="width:40%; float:right; margin-bottom:10px;margin-right:20%"><br>
 <input type="text" name="email" placeholder="Email" class="form-control" style="width:80%; margin-bottom:10px;">
-<input type="text" name="rentermail" placeholder="Re-enter Email" class="form-control" style="width:80%; margin-bottom:10px;" >
-<input type="password" name="new_pwd" placeholder="Enter New Password" class="form-control" style="width:80%; margin-bottom:10px;">
+<input type="text" name="remail" placeholder="Re-enter Email" class="form-control" style="width:80%; margin-bottom:10px;" >
+<input type="password" name="pwd" placeholder="Enter New Password" class="form-control" style="width:80%; margin-bottom:10px;">
 <p class="text-info" style="font-size:16px; font-weight:bold">Birthday</p>
 <select name="date" id="date">
 	<option value="1">1</option> <option value="2">2</option> <option value="3">3</option>	<option value="4">4</option>
@@ -60,10 +58,10 @@
 	<option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option>
 	<option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
 <select name="month" id="month">
-	<option value="Jan">Jan</option><option value="Feb">Feb</option><option value="Mar">Mar</option>
-	<option value="Apr">Apr</option><option value="May">May</option><option value="June">June</option>
-	<option value="July">July</option><option value="Aug">Aug</option><option value="Sep">Sep</option>
-	<option value="Oct">Oct</option><option value="Nov">Nov</option><option value="Dec">Dec</option>
+	<option value="01">Jan</option><option value="02">Feb</option><option value="03">Mar</option>
+	<option value="04">Apr</option><option value="05">May</option><option value="06">June</option>
+	<option value="07">July</option><option value="08">Aug</option><option value="09">Sep</option>
+	<option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
 </select>
 <select name="year" id="year">
 	<option value="1991">1991</option>
@@ -72,8 +70,8 @@
 	<option value="1994">1994</option>
 	<option value="1995">1995</option>
 </select> <font style="font-size:16px; font-weight:bold">Please provide your date of birth.</font ><br>
-<input type="radio" name="male" checked>Male
-<input type="radio" name="male">Female
+<input type="radio" name="gender" value="m" checked>Male
+<input type="radio" name="gender" value="fm">Female
 <br>
 <input class="btn btn-success" type="submit" id="create_account" value="Create an account">
 <input type="reset" class="btn btn-primary" value="Reset">
